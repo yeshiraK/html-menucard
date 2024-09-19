@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Cinzel", serif;
+}
+
+body {
+    background-image: url(bgi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 40px;
+}
+
+.menu-title {
+    margin-top: 8.5rem;
+    background: rgb(244,237,158);
+    background: linear-gradient(270deg, rgba(244,237,158,1) 0%, rgba(255,182,69,1) 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu-item {
+    margin-bottom: 4rem;
+}
+
+.menu-item h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 2rem;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 26px;
+}
+
+.item-info .item-title, .item-info .item-roll1, 
+.item-info .item-roll2, .item-info .item-roll3,
+.item-info .item-name, .item-info .item-sas1,
+.item-info .item-sas2, .item-info .item-sas3,
+.item-info .item-lable, .item-info .item-val1, 
+.item-info .item-val2, .item-info .item-val3, .item-uramaki, .item-sashimi, .item-nigiri {
+    flex-basis: 50%;
+    text-align: center;
+    background: rgb(244,237,158);
+    background: linear-gradient(270deg, rgba(244,237,158,1) 0%, rgba(255,182,69,1) 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Positioning the images on the sides */
+.sushi {
+    position: absolute;
+    top: 1%;
+    right: 5%; /* Moves to the right */
+    height: 365px;
+    width: 365px;
+}
+
+
+
+/* Ease-in animation */
+@keyframes easeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Adds a slight zoom-in effect */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Restores to original size */
+    }
+}
+
+.sushi, .menu-title, .menu-item {
+    animation: easeIn 1s ease-in;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .menu {
+        width: 90%;
+    }
+
+    .menu-item h2 {
+        font-size: 28px;
+    }
+
+    .item-info {
+        font-size: 20px;
+    }
+
+    .sushi{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-container {
+        font-size: 30px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu-title {
+        font-size: 35px;
+    }
+
+    .menu-item h2 {
+        font-size: 24px;
+    }
+
+    .item-info {
+        font-size: 18px;
+        flex-direction: column;
+    }
+
+    .sushi {
+        height: 200px;
+        width: 200px;
+        top: 5%;
+        bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu-container {
+        font-size: 25px;
+    }
+
+    .menu-title {
+        font-size: 30px;
+    }
+
+    .menu-item h2 {
+        font-size: 20px;
+    }
+
+    .item-info {
+        font-size: 16px;
+        flex-direction: column;
+    }
+
+    .sushi{
+        height: 150px;
+        width: 150px;
+        top: 5%;
+        bottom: 5%;
+    }
+}
